@@ -1,0 +1,14 @@
+<div class="row">
+    <div *ngFor="let card of cardsData; let i = index;" class="column">
+      <div class="card">
+        <div style="height:200px;background-color: lightgray;">
+
+        </div>
+        <p class="card-missionName-color"><b>{{ card.mission_name }}</b>&nbsp;<b>#{{ card.flight_number}}</b></p>
+        <p><b>Mission Id's :</b>Some text</p>
+        <p><b>Launch Year :</b>{{ card.launch_year }}</p>
+        <p><b>Successful Launch :</b>{{ card.launch_success }}</p>
+        <p><b>Successful Landing :</b>{{ card.launch_success }}</p>
+      </div>
+    </div>
+  </div>
