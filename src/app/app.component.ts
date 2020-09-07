@@ -7,14 +7,13 @@ import { ApiService } from '../app/services/api.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
+  title = 'launch-programs';
   programs:any[];
   filterYears: string[];
   constructor(private apiService: ApiService){}
   ngOnInit(){
-    this.programs = [];
-    //this.filterYears = [{'year':"2006"}];
-    this.apiService.fetchDataOnLoad().subscribe((data: any[])=>{  
-      debugger;
+    this.programs = [];   
+    this.apiService.fetchDataOnLoad().subscribe((data: any[])=>{
       console.log(data);
       this.programs = data;		
 		});
