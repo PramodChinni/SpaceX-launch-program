@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "node_cmd": "ng test && ng build --prod"
+    "node_cmd": "ng build --prod"
   },
   "private": true,
   "engines": {
