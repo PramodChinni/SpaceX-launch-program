@@ -4,84 +4,9 @@
    <h4>SpaceX Launch Programs</h4>
   </div>
   <div class="row">
-    <div class="sidebar pb-2">
-      <!-- <a class="active" href="#home">Home</a>
-      <a href="#news">News</a>
-      <a href="#contact">Contact</a>
-      <a href="#about">About</a> -->
-      <div class="container px-1">
-        <h4>Filters</h4>
-        <div class="row mx-4" style="border-bottom:1px solid gray;text-align: center;">
-          <label class="mx-auto mb-0">Launch Year</label>
-        </div>
-        <div class="row mt-2">
-          <div class="col-md-12 col-lg-12">
-            <button class="btn btn-primary btn-custom ml-2">2006</button>         
-            <button class="btn btn-primary btn-custom mr-2 float-right">2007</button>
-          </div>       
-        </div>
-        <div class="row mt-2">
-          <div class="col-md-12 col-lg-12">
-            <button class="btn btn-primary btn-custom ml-2">2008</button>         
-            <button class="btn btn-primary btn-custom mr-2 float-right">2009</button>
-          </div>   
-        </div>
-        <div class="row mt-2">
-          <div class="col-md-12 col-lg-12">
-            <button class="btn btn-primary btn-custom ml-2">2010</button>         
-            <button class="btn btn-primary btn-custom mr-2 float-right">2011</button>
-          </div>   
-        </div>
-        <div class="row mt-2">
-          <div class="col-md-12 col-lg-12">
-            <button class="btn btn-primary btn-custom ml-2">2012</button>         
-            <button class="btn btn-primary btn-custom mr-2 float-right">2013</button>
-          </div>   
-        </div>
-        <div class="row mt-2">
-          <div class="col-md-12 col-lg-12">
-            <button class="btn btn-primary btn-custom ml-2">2014</button>         
-            <button class="btn btn-primary btn-custom mr-2 float-right">2015</button>
-          </div>   
-        </div>
-        <div class="row mt-2">
-          <div class="col-md-12 col-lg-12">
-            <button class="btn btn-primary btn-custom ml-2">2016</button>         
-            <button class="btn btn-primary btn-custom mr-2 float-right">2017</button>
-          </div>   
-        </div>
-        <div class="row mt-2">
-          <div class="col-md-12 col-lg-12">
-            <button class="btn btn-primary btn-custom ml-2">2018</button>         
-            <button class="btn btn-primary btn-custom mr-2 float-right">2019</button>
-          </div>   
-        </div>
-        <div class="row mt-2">
-          <div class="col-md-12 col-lg-12">
-            <button class="btn btn-primary btn-custom ml-2">2020</button>           
-          </div>          
-        </div>
-        <div class="row mx-4 mt-4" style="border-bottom:1px solid gray;text-align: center;">
-          <label class="mx-auto mb-0">Successful Launch</label>
-        </div>
-        <div class="row mt-2">
-          <div class="col-md-12 col-lg-12">
-            <button class="btn btn-primary btn-custom ml-2">True</button>         
-            <button class="btn btn-primary btn-custom mr-2 float-right">False</button>
-          </div>   
-        </div>
-        <div class="row mx-4 mt-4" style="border-bottom:1px solid gray;text-align: center;">
-          <label class="mx-auto mb-0">Successful Landing</label>
-        </div>
-        <div class="row mt-2">
-          <div class="col-md-12 col-lg-12">
-            <button class="btn btn-primary btn-custom ml-2">True</button>         
-            <button class="btn btn-primary btn-custom mr-2 float-right">False</button>
-          </div>   
-        </div>
-      </div>
+    <div class="sidebar pb-2">  
+    <app-filter-component></app-filter-component>
     </div>
-    
     <div class="content">
       <app-cards-component [cardsData]="programs"></app-cards-component>
     </div>

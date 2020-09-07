@@ -44,3 +44,17 @@
   .card-missionName-color{
       color:blue;
   }
+
+  /* Tablet view media query for arranging cards*/
+  @media only screen and (min-width: 700px) and (max-width: 1024px) { 
+    .column {
+      width: 50%;
+      display: block;
+      margin-bottom: 20px;
+    }
+  } 
+
+  .img-container{
+    height:200px;
+    background-color: lightgray;
+  }
