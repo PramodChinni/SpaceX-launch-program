@@ -1,3 +1,4 @@
+/*media query to override bootstrap container class*/
 @media (min-width: 1440px){
   .container, .container-lg, .container-md, .container-sm, .container-xl {
       max-width: 1440px;
@@ -70,11 +71,21 @@ div.content {
     background-color: lightgrey;
 }
 
-.fix-header{
-  /* position: fixed; */
+.fix-header{ 
   margin-top: 35px;
 }
 
 .fix-content{
   margin-top: 35px;
+}
+
+/*Footer Styles */
+.footer{
+  position:fixed;
+  bottom:0;
+  width:100%;
+  text-align:center;
+  font-weight:normal;
+  height:40px;
+  background-color: lightgray;
 }

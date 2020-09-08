@@ -2,7 +2,9 @@
     <div *ngFor="let card of cardsData; let i = index;" class="column">
       <div class="card">
         <div class="img-container">
-          <img style="display: block;" class="mx-auto img-thumbnail p-0" height="200" width="200" src={{card.links.mission_patch_small}}>
+          <img style="display: block;" class="mx-auto p-0" height="200" width="200" 
+          src={{card.links.mission_patch_small}}
+          [ngClass]="{'img-container-default': !card.links.mission_patch_small, 'img-thumbnail': card.links.mission_patch_small}">
         </div>
         <p class="card-missionName-color pb-0 mt-2"><b>{{ card.mission_name }}</b>&nbsp;<b>#{{ card.flight_number}}</b></p>
         <p class="pb-0"><b>Mission Id's : &nbsp;</b>

@@ -4,11 +4,10 @@
     border-radius: 6px;
   }
 
-  .btn-primary.btn-custom {
-    /* #7ebb00 */
+  .btn-custom {   
     background-color: #c6e198;
     color: #000;
-	border-color:#c6e198;
+	  border-color:#c6e198;
 }
 
 .active-btn{
@@ -25,7 +24,7 @@
     outline: none;
 }
 
-.btn-primary.btn-custom:active{
+.btn-custom:active{
     background-color: #7ebb00!important;
     outline: none;
     box-shadow: none;

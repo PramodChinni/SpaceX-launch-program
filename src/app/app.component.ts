@@ -16,29 +16,40 @@ export class AppComponent implements OnInit {
   ngOnInit(){
     this.programs = [];  
     if(isPlatformBrowser(this.platformId)){
-      this.loadData(window.localStorage.getItem('queryParams'));     
+      let data = JSON.parse(window.localStorage.getItem('filterCached'));
+      if(data){
+        const {launch_year, launch_success, land_success} = JSON.parse(window.localStorage.getItem('filterCached')); 
+        const qryParamStrng = this.encodeQueryData({launch_year, launch_success, land_success});
+        this.loadData(qryParamStrng); 
+      } else{
+        this.loadData(null);
+      }         
     }    
   }
 
   loadData(data){
-    this.apiService.fetchDataOnLoad(data).subscribe((data: any[])=>{ 
-      console.log(data);     
+    this.apiService.fetchDataOnLoad(data).subscribe((data: any[])=>{       
       this.programs = data;		
 		}); 
   }
 
-  handleFilterRequest(evnt: any){    
-    debugger;
+  handleFilterRequest(evnt: any){
     if(evnt){
-      this.loadData(this.encodeQueryData(evnt));
-      window.localStorage.setItem('queryParams', this.encodeQueryData(evnt));
+      const data = JSON.parse(window.localStorage.getItem('filterCached'));
+      const combinedData = {...data,...evnt};
+      const {launch_year, launch_success, land_success} = combinedData;
+      const qryParamStrng = this.encodeQueryData({launch_year, launch_success, land_success});
+      this.loadData(qryParamStrng);     
+      window.localStorage.setItem('filterCached', JSON.stringify(combinedData));
     }    
   }
 
   encodeQueryData(data) {
     const ret = [];
-    for (let d in data)
+    for (let d in data){
+      if(data[d] || data[d] == false)
       ret.push(encodeURIComponent(d) + '=' + encodeURIComponent(data[d]));
+    }      
     return ret.join('&');
  }
 }
