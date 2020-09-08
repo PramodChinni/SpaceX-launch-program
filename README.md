@@ -37,5 +37,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 7. Node JS
 8. CI/CD Heroku
 9. Bootstrap CSS Framework
-10.Karma and Jasmine for unit testing
-11.RxJS
+10. Karma and Jasmine for unit testing
+11. RxJS
