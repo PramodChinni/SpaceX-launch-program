@@ -20,6 +20,9 @@
 
 .de-active-btn{
     background-color: #c6e198;
+    outline: none;
+    box-shadow: none;
+    outline: none;
 }
 
 .btn-primary.btn-custom:active{
@@ -27,4 +30,9 @@
     outline: none;
     box-shadow: none;
     outline: none;
+  }
+
+  .label-underline{
+    border-bottom:1px solid gray;
+    text-align: center;
   }

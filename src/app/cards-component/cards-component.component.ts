@@ -15,7 +15,6 @@ export class CardsComponentComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges(data:any){
-    debugger;
     if(data &&  data.cardsData){
       this.cardsData = data.cardsData.currentValue;
     }

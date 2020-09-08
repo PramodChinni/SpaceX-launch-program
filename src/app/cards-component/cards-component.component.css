@@ -42,7 +42,12 @@
   }
 
   .card-missionName-color{
-      color:blue;
+      color:#454d94;
+      /* #dddeea */
+  }
+
+  .card-text-color{
+    color: #66698b; 
   }
 
   /* Tablet view media query for arranging cards*/
@@ -55,6 +60,15 @@
   } 
 
   .img-container{
-    height:200px;
+    height:auto;
     background-color: lightgray;
   }
+
+  .img-thumbnail {
+    padding: .25rem;
+    background-color: lightgray;
+    border: 1px solid lightgray;
+    border-radius: .25rem;
+    max-width: 100%;
+    height: auto;
+}

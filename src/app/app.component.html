@@ -1,14 +1,14 @@
 <div class="container">
-  <div class="row">
-    <!-- style="position:fixed;z-index:99;" -->
+  <div class="row caption-title w-100">   
    <h4>SpaceX Launch Programs</h4>
   </div>
   <div class="row">
-    <div class="sidebar pb-2">  
-    <app-filter-component></app-filter-component>
+    <div class="sidebar fix-header pb-2">  
+    <app-filter-component (filterObject)="handleFilterRequest($event)"></app-filter-component>
     </div>
-    <div class="content">
+    <div class="content fix-content">
       <app-cards-component [cardsData]="programs"></app-cards-component>
     </div>
   </div>
 </div>
+<app-loader-component></app-loader-component>

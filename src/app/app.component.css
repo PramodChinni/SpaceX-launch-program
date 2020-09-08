@@ -62,3 +62,19 @@ div.content {
     float: none;
   }
 }
+
+/*Styles for aplication caption*/
+.caption-title{
+    position: fixed;
+    z-index: 10;
+    background-color: lightgrey;
+}
+
+.fix-header{
+  /* position: fixed; */
+  margin-top: 35px;
+}
+
+.fix-content{
+  margin-top: 35px;
+}
