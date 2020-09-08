@@ -7,7 +7,6 @@ import { AppConstants } from '../app-constants';
   styleUrls: ['./filter-component.component.css']
 })
 export class FilterComponentComponent implements OnInit {
-
   isClicked:boolean;
   yearButtons: ButtonModel[];
   launchButtons: ButtonModel[];
